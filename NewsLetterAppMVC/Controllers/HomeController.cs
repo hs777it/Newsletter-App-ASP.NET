@@ -10,10 +10,14 @@ namespace NewsLetterAppMVC.Controllers
 {
     public class HomeController : Controller
     {
+        //Creating a connection string here to establish a connection with our database
+        private readonly string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+
         public ActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult SignUp(string firstName, string lastName, string emailAddress)
         {
@@ -23,9 +27,6 @@ namespace NewsLetterAppMVC.Controllers
             }
             else
             {
-                //Creating a connection string here to establish a connection with our database
-                string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Newsletter;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
                 //Creating a query here to insert data into the table we created in our newsletter database
                 string queryString = @"INSERT INTO SignUps (FirstName, LastName, EmailAddress) VALUES
                                         (@FirstName, @LastName, @EmailAddress)";
@@ -44,23 +45,13 @@ namespace NewsLetterAppMVC.Controllers
                     connection.Open();
                     command.ExecuteNonQuery();
                     connection.Close();
-
-
                 }
                 return View("Success");
             }
         }
-        public ActionResult About()
+       
+        public ActionResult Admin()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
