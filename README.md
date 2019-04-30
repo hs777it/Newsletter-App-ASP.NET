@@ -8,5 +8,6 @@
 * How to create a database and tables using SQL Server
 * How to create a connection string with ADO.NET
 * How to use Razor Syntanx to blend C# and HTML code
+* How to add a admin page to view subscribers information
 
 <img src="https://github.com/CodingMikey/Newsletter-App-ASP.NET/blob/master/NewsLetterAppMVC/Screenshot%20(17).png?raw=true" title="SignUp" alt="Signup">
