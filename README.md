@@ -9,4 +9,4 @@
 * How to create a connection string with ADO.NET
 * How to use Razor Syntanx to blend C# and HTML code
 
-<img src="https://github.com/CodingMikey/Newsletter-App-ASP.NET/blob/master/NewsLetterAppMVC/Screenshot%20(14).png?raw=true" title="SignUp" alt="Signup">
+<img src="https://github.com/CodingMikey/Newsletter-App-ASP.NET/blob/master/NewsLetterAppMVC/Screenshot%20(17).png?raw=true" title="SignUp" alt="Signup">
