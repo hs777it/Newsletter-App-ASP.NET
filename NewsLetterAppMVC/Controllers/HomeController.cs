@@ -1,4 +1,5 @@
 ﻿using NewsLetterAppMVC.Models;
+using NewsLetterAppMVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -50,7 +51,7 @@ namespace NewsLetterAppMVC.Controllers
                 return View("Success");
             }
         }
-       
+
         public ActionResult Admin()
         {
             string queryString = @"SELECT Id, FirstName, LastName, EmailAddress, SocialSecurityNumber from Signups";
@@ -76,6 +77,15 @@ namespace NewsLetterAppMVC.Controllers
                     signups.Add(signup);
                 }
             }
+            var signupVms = new List<SignupVm>();
+            foreach (var signup in signups)
+            {
+                var signupVm = new SignupVm();
+                signupVm.FirstName = signup.FirstName;
+                signupVm.LastName = signup.LastName;
+                signupVm.EmailAddress = signup.EmailAddress;
+                signupVms.Add(signupVm);
+            }
 
             return View(signups);
         }
@@ -83,4 +93,3 @@ namespace NewsLetterAppMVC.Controllers
 }
 
 
- 

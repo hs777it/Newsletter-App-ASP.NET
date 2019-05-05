@@ -5,7 +5,7 @@ using System.Web;
 
 namespace NewsLetterAppMVC.ViewModels
 {
-    public class SignUpVm
+    public class SignupVm
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
