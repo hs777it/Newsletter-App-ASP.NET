@@ -11,4 +11,4 @@
 * How to add a admin page to view subscribers information
 * How to map properties between objects 
 
-<img src="https://github.com/CodingMikey/Newsletter-App-ASP.NET/blob/master/NewsLetterAppMVC/Screenshot%20(17).png?raw=true" title="SignUp" alt="Signup">
+<img src="https://github.com/CodingMikey/Newsletter-App-ASP.NET/blob/master/NewsLetterAppMVC/Screenshot%20(17).png?raw=true" title="SignUp" alt="Screenshot">
